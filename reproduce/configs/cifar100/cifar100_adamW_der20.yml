@@ -1,0 +1,30 @@
+# GENERAL
+num_workers: 1
+backbone: "resnet18_big_t"
+use_small_resolution_adj: True
+scenario: 'cifar100'
+use_rand_class_ordering: True
+task_incr: True
+use_data_aug: "simclr"
+optim: "adamW"
+lr: 0.001
+bs: 128
+weight_decay: 0.0005
+epochs: [50]
+skip_initial_eval: True
+eval_max_iterations: 0
+use_lp_eval: ["linear", "knn"]
+knn_k: [1, 10, 50, 200]
+lp_eval_all: True
+
+# STRATEGY
+strategy: "DER"
+lmbda: 1.0
+do_decay_lmbda: True
+mem_size: 2000 
+
+
+
+
+
+ 

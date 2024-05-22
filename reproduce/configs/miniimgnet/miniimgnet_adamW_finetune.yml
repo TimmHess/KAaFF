@@ -1,0 +1,22 @@
+# GENERAL
+scenario: 'miniimgnet'
+num_experiences: 20
+use_rand_class_ordering: True
+num_workers: 1
+backbone: "resnet18_big_t"
+task_incr: True
+use_data_aug: "simclr"
+optim: "adamW"
+lr: 0.001
+bs: 128
+weight_decay: 0.0005
+epochs: [50]
+lp_finetune_epochs: 100
+skip_initial_eval: False
+eval_max_iterations: 0
+use_lp_eval: ["linear", "knn"]
+knn_k: [1, 10, 50, 200]
+lp_eval_all: True
+
+# STRATEGY
+strategy: "finetune"

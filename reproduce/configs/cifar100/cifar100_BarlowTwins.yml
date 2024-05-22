@@ -1,0 +1,23 @@
+# GENERAL
+num_workers: 1
+backbone: "resnet18_big_t"
+use_small_resolution_adj: True
+scenario: 'cifar100'
+use_rand_class_ordering: True
+task_incr: True
+use_data_aug: "simclr"
+optim: "adam"
+lr: 0.0001
+bs: 256
+weight_decay: 0.0005
+epochs: [500]
+skip_initial_eval: True
+eval_max_iterations: 0
+enable_continual_eval: False 
+use_lp_eval: ["linear", "knn"]
+knn_k: [1, 10, 50, 200]
+lp_eval_all: True
+
+# STRATEGY
+strategy: "barlow_twins"
+

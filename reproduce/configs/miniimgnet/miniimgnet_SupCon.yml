@@ -1,0 +1,34 @@
+# GENERAL
+num_workers: 1
+backbone: "resnet18_big_t"
+scenario: 'miniimgnet'
+num_experiences: 20
+use_rand_class_ordering: True
+task_incr: True
+use_data_aug: "simclr"
+reset_optim_each_exp: True
+optim: "sgd"
+lr: 0.01
+bs: 256
+weight_decay: 0.0001
+epochs: [500, 100]
+skip_initial_eval: True
+eval_max_iterations: 0
+enable_continual_eval: False # NOTE: need to explicitly deactivate all continual-eval features!
+use_lp_eval: ["linear", "knn"]
+knn_k: [1, 10, 50, 200]
+lp_eval_all: True
+
+# STRATEGY
+strategy: "supcon"
+supcon_projection_dim: 128
+supcon_temperature: 0.1
+
+one_cycle_lr_schedule: True
+one_cycle_warmup_epochs: 10
+one_cycle_final_lr: 0.0005
+
+
+
+
+
