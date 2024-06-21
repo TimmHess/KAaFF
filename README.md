@@ -1,6 +1,12 @@
 # Knowledge Accumulation in Continually Learned Representations and the Issue of Feature Forgetting (KAaFF)
 [//]: # (**What is this repo?**)
-This repository contains the codebase for our paper "Knowledge Accumulation in Continually Learned Representations and the Issue of Feature Forgetting". 
+This repository contains the codebase for reproducing the results of our paper "Knowledge Accumulation in Continually Learned Representations and the Issue of Feature Forgetting", [accepted to TMLR 2024](https://openreview.net/forum?id=Zy350cRstc6).
+
+Please see our paper for a detailed description of this work: https://arxiv.org/abs/2304.00933 
+
+We also provide a video covering the main points of our paper here:
+
+[![YouTube](http://i.ytimg.com/vi/od0GNwd4-Cs/hqdefault.jpg)](https://www.youtube.com/watch?v=od0GNwd4-Cs)
 
 ## Setup
 This code uses
@@ -40,7 +46,17 @@ To view results for Tensorboard, run:
     tensorboard --logdir=OUTPUT_DIR
 
 
-## Licence
+## Citation and licence
+
+    @inproceedings{hess2023knowledge,
+      title={Knowledge accumulation in continually learned representations and the issue of feature forgetting},
+      author={Hess, Timm and Verwimp, Eli and van de Ven, Gido M and Tuytelaars, Tinne},
+      journal={Transactions on Machine Learning Research (TMLR)},
+      year={2024},
+      url={https://openreview.net/forum?id=aHtZuZfHcf}
+    }
+
+
 Code is available under MIT license: A short and simple permissive license with conditions only requiring preservation of copyright and license notices.
 
 
